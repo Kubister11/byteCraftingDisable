@@ -22,6 +22,7 @@ public class MainCommand implements CommandExecutor, TabCompleter {
     }
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+        if (!sender.hasPermission("bytecraftingdisable.add")) return true;
         if (args.length == 0) {
             if (!(sender instanceof Player p)) return true;
             SmartInventory.builder()
