@@ -1,0 +1,8 @@
+name: ByteCraftingDisable
+version: '${project.version}'
+main: me.kubister11.bytecraftingdisable.ByteCraftingDisable
+api-version: 1.16
+authors: [ Kubister11 ]
+website: gether.dev
+commands:
+  bytecrafting:
