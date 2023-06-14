@@ -4,6 +4,7 @@ import lombok.Getter;
 import me.kubister11.bytecraftingdisable.storage.api.ConfigFile;
 import org.bukkit.plugin.Plugin;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Config extends ConfigFile {
@@ -19,5 +20,5 @@ public class Config extends ConfigFile {
     public static String MESSAGES_ADD$BUTTON = "&aDodaj";
     public static String MESSAGES_EXIT$BUTTON = "&cWyjdz";
     public static String GUI_TITLE = "&0Dodaj item:";
-    public static List<String> BLOCKED$MATERIALS = List.of("DIAMOND_BLOCK");
+    public static List<String> BLOCKED$MATERIALS = new ArrayList<>();
 }

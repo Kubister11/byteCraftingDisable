@@ -10,8 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ByteCraftingDisable extends JavaPlugin {
 
-    @Getter
-    private static InventoryManager invManager;
+    @Getter private static InventoryManager invManager;
 
     @Override
     public void onEnable() {
