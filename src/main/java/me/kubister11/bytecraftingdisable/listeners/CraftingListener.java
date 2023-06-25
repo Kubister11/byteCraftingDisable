@@ -20,14 +20,21 @@ public class CraftingListener implements Listener {
     public void onCrafting(CraftItemEvent e) {
         Material type = e.getRecipe().getResult().getType();
         Player p = (Player) e.getWhoClicked();
+        boolean b = canCraft(type);
+        if ((!b && !Config.WHITELIST) || (b && Config.WHITELIST)) {
+            TextUtil.sendMessage(e.getWhoClicked(), Config.MESSAGES_CANNOT$CRAFT);
+            e.setCancelled(true);
+            p.closeInventory();
+            p.updateInventory();
+        }
+    }
+
+    private static boolean canCraft(Material type) {
         for (String crafting : Config.BLOCKED$MATERIALS) {
             if (type.toString().equals(crafting) || (crafting.equals("ALL") || crafting.equals("*"))) {
-                TextUtil.sendMessage(e.getWhoClicked(), Config.MESSAGES_CANNOT$CRAFT);
-                e.setCancelled(true);
-                p.closeInventory();
-                p.updateInventory();
-                return;
+                return false;
             }
         }
+        return true;
     }
 }

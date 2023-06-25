@@ -20,5 +20,6 @@ public class Config extends ConfigFile {
     public static String MESSAGES_ADD$BUTTON = "&aDodaj";
     public static String MESSAGES_EXIT$BUTTON = "&cWyjdz";
     public static String GUI_TITLE = "&0Dodaj item:";
+    public static boolean WHITELIST = false;
     public static List<String> BLOCKED$MATERIALS = new ArrayList<>();
 }

@@ -40,7 +40,7 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <outputFile>${user.home}/Desktop/testy/1.18.2/plugins/${project.artifactId}.jar</outputFile>
+<!--                            <outputFile>${user.home}/Desktop/testy/1.18.2/plugins/${project.artifactId}.jar</outputFile>-->
                         </configuration>
                     </execution>
                 </executions>
@@ -77,6 +77,12 @@
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>3.0.2</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
